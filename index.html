@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    
+    <form id="form">
+      <input type="text"  placeholder="Имя:" id="name"/>
+      <input type="text" placeholder="Фамилия:" id="surname" />
+      <input type="number" placeholder="Зарплата:" id="salary"/>
+      <input type="date" placeholder="Дата найма:" id="employment-date"/>
+      <button id="submitBtn">Submit</button>
+    </form>
+
+    <table id="table-employees" border="2" cellpadding="5">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Имя</th>
+          <th>Фамилия</th>
+          <th>Зарплата <button class="filtration-salary-up">&#8593;</button><button class="filtration-salary-down">&#8595;</button></th>
+          <th>Дата найма <button class="filtration-date-up">&#8593;</button><button class="filtration-date-down">&#8595;</button></th> 
+        </tr>
+       </thead>
+        <tbody id="table-body"></tbody>
+    </table>
+
+    <div id="selectionBtn">
+      <button id="fireEeveryoneBtn">Уволить всех</button>
+      <button id="fireBtn">Уволить</button>
+      <button id="editBtn">Редактировать</button>
+    </div>
+
+    <div class="modalWrapper toggleModal">
+      <div class="modal">
+        <h3>окно редактирования</h3>
+        <form>
+          <div class="edit-wrapper">
+            <input type="text" placeholder="Имя:" id="editName"/>
+            <input type="text" placeholder="Фамилия:" id="editSurname"/>
+            <input type="number" placeholder="Зарплата:" id="editSalary"/>
+            <input type="date" placeholder="Дата найма:" id="editDate"/>
+          </div>
+          <button id="saveBtn">Сохранить</button>
+          <button id="closeBtn">Закрыть</button>
+        </form>
+        
+      </div>
+    </div>
+
+    <div class="banner">Все уволены!</div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

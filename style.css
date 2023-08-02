@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+  background-color: #d8c0dd;
+  border: 3px solid #8414a6;
+  border-radius: 25px;
+}
+
+input {
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid purple; 
+  border-radius: 15px;
+  
+}
+
+
+#table-employees {
+  margin:auto;
+  width: 75%;
+  background-color: #a3dee7;
+  border: 3px solid #166770;
+  margin-top: 20px;
+  text-align: center;
+}
+
+table {
+  border: 3px soid aquamarine;  margin-top: 20px;
+  margin-bottom: 2rem;
+  border-collapse: collapse;
+  width: 100%;
+
+}
+
+th {
+  padding: 0.5rem 1.5rem;
+}
+
+#submitBtn {
+  margin: 0.3rem;
+  padding: 0.5rem;
+  border: 2px solid purple;
+  background-color: purple;
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
+}
+
+.modalWrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(132, 197, 255, 0.5);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  padding: 10px;
+  background-color: white;
+  border: 2px solid purple;
+  border-radius: 3px;
+}
+
+.toggleModal {
+  display: none;
+}
+
+.edit-wrapper {
+  /* display: flex;
+  justify-content: space-between; */
+  margin: 0 auto;
+  margin: 10px;
+}
+
+.banner {
+  position: fixed;
+  bottom: 0;
+  padding: 10px;
+  background-color: rgb(86, 194, 62);
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 45px;
+}
+
+#selectionBtn {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin:0 auto;
+  margin-top: 20px;
+ 
+}
+
+#fireEeveryoneBtn{
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 -1px rgba(0,0,0,.5);
+  user-select: none;
+  padding: .7em 1.5em;
+  border: 1px solid rgb(80,32,0);
+  border-radius: 5px;
+  outline: none;
+  background: rgb(147,80,36) linear-gradient(rgb(106,58,26), rgb(147,80,36) 80%);
+  box-shadow:
+   0 6px rgb(86,38,6),
+   0 3px 15px rgba(0,0,0,.4),
+   inset 0 1px rgba(255,255,255,.3),
+   inset 0 0 3px rgba(255,255,255,.5);
+  transition: .2s;
+} 
+#fireEeveryoneBtn:hover {
+  background: rgb(167,91,41) linear-gradient(rgb(126,69,31), rgb(167,91,41) 80%);
+}
+#fireEeveryoneBtn:active {
+  background: rgb(120,63,25) linear-gradient(rgb(120,63,25) 20%, rgb(167,91,41));
+  box-shadow:
+   0 2px rgb(86,38,6),
+   0 1px 6px rgba(0,0,0,.4),
+   inset 0 1px rgba(255,255,255,.3),
+   inset 0 0 3px rgba(255,255,255,.5);
+  -webkit-transform: translate(0, 4px);
+  transform: translate(0, 4px);
+}
+
+#fireBtn{
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 -1px rgba(0,0,0,.5);
+  user-select: none;
+  padding: .7em 1.5em;
+  border: 1px solid rgb(80,32,0);
+  border-radius: 5px;
+  outline: none;
+  background: rgb(147,80,36) linear-gradient(rgb(106,58,26), rgb(147,80,36) 80%);
+  box-shadow:
+   0 6px rgb(86,38,6),
+   0 3px 15px rgba(0,0,0,.4),
+   inset 0 1px rgba(255,255,255,.3),
+   inset 0 0 3px rgba(255,255,255,.5);
+  transition: .2s;
+} 
+#fireBtn:hover {
+  background: rgb(167,91,41) linear-gradient(rgb(126,69,31), rgb(167,91,41) 80%);
+}
+#fireBtn:active {
+  background: rgb(120,63,25) linear-gradient(rgb(120,63,25) 20%, rgb(167,91,41));
+  box-shadow:
+   0 2px rgb(86,38,6),
+   0 1px 6px rgba(0,0,0,.4),
+   inset 0 1px rgba(255,255,255,.3),
+   inset 0 0 3px rgba(255,255,255,.5);
+  -webkit-transform: translate(0, 4px);
+  transform: translate(0, 4px);
+}
+
+#editBtn{
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 -1px rgba(0,0,0,.5);
+  user-select: none;
+  padding: .7em 1.5em;
+  border: 1px solid rgb(80,32,0);
+  border-radius: 5px;
+  outline: none;
+  background: rgb(147,80,36) linear-gradient(rgb(106,58,26), rgb(147,80,36) 80%);
+  box-shadow:
+   0 6px rgb(86,38,6),
+   0 3px 15px rgba(0,0,0,.4),
+   inset 0 1px rgba(255,255,255,.3),
+   inset 0 0 3px rgba(255,255,255,.5);
+  transition: .2s;
+} 
+#editBtn:hover {
+  background: rgb(167,91,41) linear-gradient(rgb(126,69,31), rgb(167,91,41) 80%);
+}
+#editBtn:active {
+  background: rgb(120,63,25) linear-gradient(rgb(120,63,25) 20%, rgb(167,91,41));
+  box-shadow:
+   0 2px rgb(86,38,6),
+   0 1px 6px rgba(0,0,0,.4),
+   inset 0 1px rgba(255,255,255,.3),
+   inset 0 0 3px rgba(255,255,255,.5);
+  -webkit-transform: translate(0, 4px);
+  transform: translate(0, 4px);
+}
